@@ -1,5 +1,5 @@
-const CACHE_NAME='three-jacks-v0-26-20260908';
-const SHELL=['./','./index.html','./css/style.css?v=0.26','./js/storyData.js?v=0.26','./js/assetMap.js?v=0.26','./js/stageMap.js?v=0.26','./js/visualMap.js?v=0.26','./js/directorMap.js?v=0.26','./js/assetAliases.js?v=0.26','./js/assetAvailability.js?v=0.26','./js/portraitMasks.js?v=0.26','./js/app.js?v=0.26','./assets/sfx/sfx_test.wav'];
+const CACHE_NAME='three-jacks-v0-29-20260908';
+const SHELL=['./','./index.html','./css/style.css?v=0.29','./js/storyData.js?v=0.29','./js/assetMap.js?v=0.29','./js/stageMap.js?v=0.29','./js/visualMap.js?v=0.29','./js/directorMap.js?v=0.29','./js/assetAliases.js?v=0.29','./js/assetAvailability.js?v=0.29','./js/portraitMasks.js?v=0.29','./js/app.js?v=0.29','./assets/sfx/sfx_test.wav'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('three-jacks-')&&k!==CACHE_NAME).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{

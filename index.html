@@ -4,30 +4,60 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <meta name="theme-color" content="#111318" />
-  <title>세 명의 잭</title>
-  <link rel="stylesheet" href="./css/style.css?v=0.26" />
+  <title>세명의 잭</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Song+Myung&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Serif+KR:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css?v=0.29" />
 </head>
 <body>
   <div id="bootOverlay" class="boot-overlay" aria-live="polite">
     <div class="boot-inner">
       <span class="boot-kicker">HISTORY STORY SIMULATION</span>
-      <strong>세 명의 잭</strong>
+      <strong>세명의 잭</strong>
       <div class="boot-line"><i id="bootProgress"></i></div>
       <small id="bootText">이야기를 준비하고 있습니다…</small>
     </div>
   </div>
   <main id="app" class="app-shell">
     <section id="titleScreen" class="screen title-screen active">
-      <div class="title-vignette"></div>
+      <div class="title-bg" aria-hidden="true"></div>
+      <div class="title-map-grid" aria-hidden="true"></div>
+      <div class="title-vignette" aria-hidden="true"></div>
+
       <div class="title-content">
-        <p class="eyebrow">HISTORY STORY SIMULATION</p>
-        <h1 id="secretTitle" class="secret-title" aria-label="세 명의 잭">세 명의 잭</h1>
-        <p class="title-copy">아메리카 · 아프리카 · 유럽<br>세 사람의 삶이 하나의 바닷길에서 이어진다.</p>
+        <header class="title-heading">
+          <p class="title-era"><span>AGE OF EXPLORATION</span> 신항로 개척 시대</p>
+          <h1 id="secretTitle" class="secret-title" aria-label="세명의 잭">세명의 잭</h1>
+          <p class="title-copy">세 대륙에 살았던 세 사람의 이야기</p>
+        </header>
+
+        <div class="title-cast" aria-hidden="true">
+          <figure class="title-character title-char-america">
+            <span class="title-char-glow"></span>
+            <img src="./assets/images/characters/america_jack.webp" alt="" decoding="async" />
+            <span class="title-face-shadow"></span>
+            <figcaption>아메리카</figcaption>
+          </figure>
+          <figure class="title-character title-char-africa">
+            <span class="title-char-glow"></span>
+            <img src="./assets/images/characters/africa_jack.webp" alt="" decoding="async" />
+            <span class="title-face-shadow"></span>
+            <figcaption>아프리카</figcaption>
+          </figure>
+          <figure class="title-character title-char-europe">
+            <span class="title-char-glow"></span>
+            <img src="./assets/images/characters/europe_jack.webp" alt="" decoding="async" />
+            <span class="title-face-shadow"></span>
+            <figcaption>유럽</figcaption>
+          </figure>
+        </div>
+
         <div class="title-actions">
           <button id="startBtn" class="primary-btn">이야기 시작</button>
           <button id="continueBtn" class="ghost-btn hidden">이어보기</button>
         </div>
-        <p class="tap-hint">스마트폰 세로 화면에 최적화되어 있습니다</p>
+        <p class="title-audio-hint">♪ 이어폰을 사용하면 더욱 몰입할 수 있습니다.</p>
       </div>
     </section>
 
@@ -196,14 +226,14 @@
   <audio id="bgmA" preload="none" loop></audio>
   <audio id="bgmB" preload="none" loop></audio>
   <audio id="sfxPlayer" preload="none"></audio>
-  <script src="./js/storyData.js?v=0.26"></script>
-  <script src="./js/assetMap.js?v=0.26"></script>
-  <script src="./js/stageMap.js?v=0.26"></script>
-  <script src="./js/visualMap.js?v=0.26"></script>
-  <script src="./js/directorMap.js?v=0.26"></script>
-  <script src="./js/assetAliases.js?v=0.26"></script>
-  <script src="./js/assetAvailability.js?v=0.26"></script>
-  <script src="./js/portraitMasks.js?v=0.26"></script>
-  <script src="./js/app.js?v=0.26"></script>
+  <script src="./js/storyData.js?v=0.29"></script>
+  <script src="./js/assetMap.js?v=0.29"></script>
+  <script src="./js/stageMap.js?v=0.29"></script>
+  <script src="./js/visualMap.js?v=0.29"></script>
+  <script src="./js/directorMap.js?v=0.29"></script>
+  <script src="./js/assetAliases.js?v=0.29"></script>
+  <script src="./js/assetAvailability.js?v=0.29"></script>
+  <script src="./js/portraitMasks.js?v=0.29"></script>
+  <script src="./js/app.js?v=0.29"></script>
 </body>
 </html>

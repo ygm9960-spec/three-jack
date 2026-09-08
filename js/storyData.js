@@ -1,7 +1,7 @@
 window.THREE_JACKS_STORY = {
   "meta": {
     "title": "세 명의 잭",
-    "version": "0.22-stable-optimized",
+    "version": "0.28-title-poster",
     "theme": "신항로 개척 시대, 서로 다른 세 사람의 삶이 하나의 바닷길에서 이어진다",
     "teacherAccess": "제목을 빠르게 5번 탭/클릭",
     "teacherPin": false
@@ -1985,7 +1985,7 @@ window.THREE_JACKS_STORY = {
         },
         {
           "type": "narration",
-          "text": "아프리카의 잭은 자신의 이름을 끝까지 붙잡았다."
+          "text": "아프리카의 잭은 인간성을 박탈당했다."
         },
         {
           "type": "narration",

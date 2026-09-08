@@ -61,6 +61,11 @@
     'ch2-end':'아프리카의 잭 — 고향은 멀어졌지만 이름은 기억했다.',
     'ch3-end':'유럽의 잭 — 돈을 얻었지만 사람을 잃었다.'
   };
+  const CHAPTER_INTROS={
+    'ch1-s01':{key:'ch1',chapter:'CHAPTER 1.',title:'은빛 산 아래',subtitle:'- 아메리카의 잭 -'},
+    'ch2-s01':{key:'ch2',chapter:'CHAPTER 2.',title:'바다를 건넌 이름',subtitle:'- 아프리카의 잭 -'},
+    'ch3-s01':{key:'ch3',chapter:'CHAPTER 3.',title:'금빛 장부',subtitle:'- 유럽의 잭 -'}
+  };
   const KEY_TEST_SCENES=['prologue','ch1-s01','ch1-s03','ch1-s07','ch1-s09','ch1-end','ch2-s01','ch2-s03','ch2-s05','ch2-s08','ch2-s09','ch2-end','ch3-s01','ch3-s03','ch3-s04','ch3-s07','ch3-s09','ch3-s10','ch3-end','epilogue'];
   function paceProfile(s=scene()){
     const id=s?.id||'',ch=s?.chapter||'';
@@ -183,7 +188,8 @@
     return null;
   }
   function clearSave(){try{localStorage.removeItem(SAVE_KEY);localStorage.removeItem(SAVE_BACKUP_KEY);localStorage.removeItem(LEGACY_KEY)}catch{}}
-  function showScreen(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$(id).classList.add('active')}
+  function restartTitleReveal(){const t=$('titleScreen');if(!t)return;t.classList.remove('title-ready');void t.offsetWidth;requestAnimationFrame(()=>t.classList.add('title-ready'))}
+  function showScreen(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$(id).classList.add('active');if(id==='titleScreen')restartTitleReveal()}
   function cloneFallback(fallback){try{return typeof structuredClone==='function'?structuredClone(fallback):JSON.parse(JSON.stringify(fallback))}catch{return fallback}}
   function loadStored(key,fallback){try{const raw=localStorage.getItem(key);if(!raw)return cloneFallback(fallback);const parsed=JSON.parse(raw);return parsed&&typeof parsed==='object'?parsed:cloneFallback(fallback)}catch{return cloneFallback(fallback)}}
   function saveStored(key,value){try{localStorage.setItem(key,JSON.stringify(value))}catch{}}
@@ -566,7 +572,7 @@
     if(phase==='messages')return [['잭','은광 노동 · 귀향 약속','warn'],['아버지','은광 사고 · 다리 부상','danger'],['어머니','플랜테이션 · 고열','danger'],['여동생','손이 아픈 채 노동','warn'],['첫째','막내와 함께 있음','warn'],['막내','첫째가 돌봄','warn']];
     return [['잭','고열 · 가족에게 돌아가려 함','danger'],['아버지','부상 악화 · 소식 희미','danger'],['어머니','농장 질병 · 중병','danger'],['여동생','어머니 몫까지 노동','danger'],['첫째','다른 농장으로 이동','lost'],['막내','첫째와 이동 · 소식 단절','lost']];
   }
-  function renderWorldNetwork(card,epilogue=false){const tr=h('div','world-track');[['아메리카','은·설탕'],['아프리카','사람·총기'],['유럽','자본·상품']].forEach((x,i)=>{const n=h('div',`world-node active`);n.append(h('div','world-dot',x[0].slice(0,2)),h('small','',x[0]));tr.append(n);if(i<2)tr.append(h('div','world-line'))});card.append(tr);if(epilogue){const cards=h('div','epilogue-cards');[['아메리카의 잭','가족에게 돌아가지 못함'],['아프리카의 잭','이름을 끝까지 기억함'],['유럽의 잭','부를 얻고 사람을 잃음']].forEach(x=>{const d=h('div','ep-jack');d.append(h('strong','',x[0]),document.createTextNode(x[1]));cards.append(d)});card.append(cards)}else card.append(h('div','fx-sub','세 사람은 서로를 모르지만 같은 바닷길의 욕망으로 연결된다.'))}
+  function renderWorldNetwork(card,epilogue=false){const tr=h('div','world-track');[['아메리카','은·설탕'],['아프리카','사람·총기'],['유럽','자본·상품']].forEach((x,i)=>{const n=h('div',`world-node active`);n.append(h('div','world-dot',x[0].slice(0,2)),h('small','',x[0]));tr.append(n);if(i<2)tr.append(h('div','world-line'))});card.append(tr);if(epilogue){const cards=h('div','epilogue-cards');[['아메리카의 잭','가족에게 돌아가지 못함'],['아프리카의 잭','인간성을 박탈당함'],['유럽의 잭','부를 얻고 사람을 잃음']].forEach(x=>{const d=h('div','ep-jack');d.append(h('strong','',x[0]),document.createTextNode(x[1]));cards.append(d)});card.append(cards)}else card.append(h('div','fx-sub','세 사람은 서로를 모르지만 같은 바닷길의 욕망으로 연결된다.'))}
   function renderFamily(card,phase){const b=h('div','family-board');familyData(phase).forEach(([name,st,cls])=>{const d=h('div',`family-person ${cls}`);d.append(h('div','family-icon','●'));const t=h('div');t.append(h('b','',name),h('small','',st));d.append(t);b.append(d)});card.append(b)}
   function renderPopulation(card){
     card.classList.add('population-finale');
@@ -648,7 +654,7 @@
     const text=String(value??''),classes=Array(text.length).fill('');
     const mark=(terms,cls)=>terms.forEach(term=>{let at=0;while((at=text.indexOf(term,at))!==-1){for(let j=at;j<at+term.length;j++)classes[j]=cls;at+=term.length}});
     mark(STORY_CONCEPT_TERMS,'hl-concept');mark(STORY_EMPHASIS_PHRASES,'hl-emotion');
-    mark(['잭은 끝내 가족에게 돌아가지 못했다','사람을 잃었다','죽었다','죽었어','돌아오지 않았다','죽어','살려','숨을 쉬지','보험금','바다에 버','가족에게 돌아가지 못','다리를 다쳤대','돌아갈 수 없었다','바다에 던','숨을 거두','죽음'],'hl-tragedy');
+    mark(['잭은 끝내 가족에게 돌아가지 못했다','인간성을 박탈당했다','사람을 잃었다','죽었다','죽었어','돌아오지 않았다','죽어','살려','숨을 쉬지','보험금','바다에 버','가족에게 돌아가지 못','다리를 다쳤대','돌아갈 수 없었다','바다에 던','숨을 거두','죽음'],'hl-tragedy');
     let out='',i=0,n=Math.min(text.length,limit);while(i<n){let j=i+1;while(j<n&&classes[j]===classes[i])j++;const chunk=escapeHtml(text.slice(i,j));out+=classes[i]?'<span class="'+classes[i]+'">'+chunk+'</span>':chunk;i=j}
     if(line.timeHeading){const cut=Math.min(line.timeHeading.length,n);out='<span class="time-heading">'+escapeHtml(text.slice(0,cut))+'</span>'+(n>line.timeHeading.length?'<span class="time-description">'+formatStoryText(text.slice(line.timeHeading.length).trimStart(),{},Math.max(0,n-line.timeHeading.length-1))+'</span>':'')}
     return out;
@@ -713,12 +719,26 @@
   }
   function clearSpecialOverlays(){
     const tpo=$('timePlaceOverlay');if(!state.cinematicExit){tpo?.classList.remove('shown');tpo?.classList.add('hidden');}
-    $('epilogueOverlay')?.classList.add('hidden');$('storyScreen')?.classList.remove('prologue-mode','epilogue-mode','intertitle-mode','learning-summary-mode');$('characterLayer')?.classList.remove('summary-dim');
+    tpo?.classList.remove('chapter-intro-card','chapter-intro-ch1','chapter-intro-ch2','chapter-intro-ch3','text-out');if(tpo)tpo.removeAttribute('data-chapter-intro');
+    $('epilogueOverlay')?.classList.add('hidden');$('storyScreen')?.classList.remove('prologue-mode','epilogue-mode','intertitle-mode','chapter-intro-mode','learning-summary-mode');$('characterLayer')?.classList.remove('summary-dim');
   }
   function showTimePlaceOverlay(label,{sceneTitle=false}={}){
     const o=$('timePlaceOverlay');if(!o)return;clearTimeout(state.curtainHideTimer);o.classList.remove('chapter-end-card','shown','text-out');
     $('timePlaceKicker').textContent=label.kicker||'';$('timePlaceText').textContent=label.title||'';$('timePlaceSub').textContent=label.sub||'';
     o.classList.remove('hidden');$('storyScreen').classList.add('intertitle-mode');requestAnimationFrame(()=>o.classList.add('shown'));
+  }
+  function chapterIntroFor(s,line=0){return line===0?CHAPTER_INTROS[s?.id]||null:null}
+  async function showChapterIntro(cfg){
+    const o=$('timePlaceOverlay'),screen=$('storyScreen');if(!o||!cfg)return;
+    clearTimeout(state.curtainHideTimer);o.classList.remove('hidden','shown','text-out','chapter-end-card','chapter-intro-ch1','chapter-intro-ch2','chapter-intro-ch3');
+    o.classList.add('chapter-intro-card',`chapter-intro-${cfg.key}`);o.dataset.chapterIntro=cfg.key;
+    $('timePlaceKicker').textContent=cfg.chapter;$('timePlaceText').textContent=cfg.title;$('timePlaceSub').textContent=cfg.subtitle;
+    screen.classList.add('intertitle-mode','chapter-intro-mode');void o.offsetWidth;o.classList.add('shown');
+    const hold=reducedMotion()?1900:4800;await sleep(hold);
+    o.classList.add('text-out');await sleep(reducedMotion()?120:760);
+    o.classList.remove('shown');await sleep(reducedMotion()?120:900);
+    o.classList.add('hidden');o.classList.remove('text-out','chapter-intro-card','chapter-intro-ch1','chapter-intro-ch2','chapter-intro-ch3');o.removeAttribute('data-chapter-intro');
+    screen.classList.remove('intertitle-mode','chapter-intro-mode');
   }
   function showBookendLine(mode,text,index,total){
     const o=$('epilogueOverlay');if(!o)return;const screen=$('storyScreen'),isFinal=index===total-1;screen.classList.add(mode==='prologue'?'prologue-mode':'epilogue-mode');
@@ -827,9 +847,9 @@
     const firstIndex=studentScenes.findIndex(s=>s.id!=='prologue');const candidates=[studentScenes[firstIndex],studentScenes[firstIndex+1]].filter(Boolean);
     const seenUrls=new Set();const addJob=url=>{if(!url||seenUrls.has(url))return;seenUrls.add(url);jobs.push(preloadImage(url,{timeout:1500}))};
     candidates.forEach((s,idx)=>{const a=assetFor(s);if(a.background)addJob(`./assets/images/backgrounds/${a.background}`);prioritySceneCharacters(s,idx===0?2:1).forEach(([id,st])=>{const f=characterCandidates(id,st,'neutral')[0];if(f)addJob(`./assets/images/characters/${f}`)})});
-    if(!jobs.length){bar.style.width='100%';overlay.classList.add('ready');return}
+    if(!jobs.length){bar.style.width='100%';overlay.classList.add('ready');setTimeout(()=>{overlay.remove();restartTitleReveal()},520);return}
     let completed=0;const start=performance.now();await Promise.all(jobs.map(p=>p.finally(()=>{completed++;bar.style.width=`${Math.round((completed/jobs.length)*100)}%`;label.textContent=completed===jobs.length?'준비가 끝났습니다.':'이야기를 준비하고 있습니다…'})));
-    const elapsed=performance.now()-start;if(elapsed<420)await sleep(420-elapsed);bar.style.width='100%';await sleep(110);overlay.classList.add('ready');setTimeout(()=>overlay.remove(),520)
+    const elapsed=performance.now()-start;if(elapsed<420)await sleep(420-elapsed);bar.style.width='100%';await sleep(110);overlay.classList.add('ready');setTimeout(()=>{overlay.remove();restartTitleReveal()},520)
   }
 
   async function enterScene(index,line=0,{first=false}={}){
@@ -838,20 +858,35 @@
     const targetIndex=Math.max(0,Math.min(index,studentScenes.length-1));
     const targetScene=studentScenes[targetIndex];
     const targetLocation=locationAt(targetScene,line),locationChanged=(state.currentLocation||fromScene?.location)!==targetLocation,token=++transitionToken;
-    state.transitioning=true;clearTimeout(state.autoTimer);state.autoToken=(state.autoToken||0)+1;state.cinematicExit=false;clearTyping();$('historyDialog').close();
+    const chapterIntro=chapterIntroFor(targetScene,line);
+    const endingToEpilogue=targetScene?.id==='epilogue'&&fromScene?.id==='ch3-end';
+    state.transitioning=true;clearTimeout(state.autoTimer);state.autoToken=(state.autoToken||0)+1;state.cinematicExit=endingToEpilogue;clearTyping();$('historyDialog').close();
     const fade=$('sceneFade'),wasStory=$('storyScreen').classList.contains('active');
     fade.className='scene-fade';fade.style.setProperty('--transition-ms','650ms');
     if(!wasStory)showScreen('storyScreen');
-    if(locationChanged&&!first&&wasStory){fade.classList.add('opaque');await sleep(reducedMotion()?30:650)}
+    if(endingToEpilogue&&wasStory){
+      fade.classList.add('ending-fade');fade.style.setProperty('--transition-ms',reducedMotion()?'80ms':'2600ms');void fade.offsetWidth;fade.classList.add('opaque');
+      await sleep(reducedMotion()?100:2600);if(token!==transitionToken)return;await sleep(reducedMotion()?60:650);
+    }else if(locationChanged&&!first&&wasStory){fade.classList.add('opaque');await sleep(reducedMotion()?30:650)}
     if(token!==transitionToken)return;
     state.currentLocation=targetLocation;state.sceneIndex=targetIndex;state.lineIndex=Math.max(0,Math.min(line,targetScene.lines.length-1));state.currentCue=null;state.sceneConceptSummaryShown=true;state.conceptSummaryVisible=false;state.pendingStateShift=null;
     const s=scene();applyViewportProfile();applySceneTone(s);setBackdrop(s);setBgm(s,{immediate:first});
     $('chapterLabel').textContent=s.id==='prologue'?'PROLOGUE':s.id==='epilogue'?'EPILOGUE':chapterName(s.chapter);$('sceneLabel').textContent=s.title;
     if(locationChanged){state.lastSupportId=null;state.supportStack=[];['left','center','right'].forEach(p=>fillSlot(p,null));await preloadScene(targetIndex)}
     if(token!==transitionToken)return;
-    clearSpecialOverlays();$('storyFxLayer').dataset.visualKey='';applyStoryPreviewMode();renderLine();save();syncLayoutEditor();syncDirectorStatus();
-    fade.classList.remove('opaque');if(locationChanged&&!first)await sleep(reducedMotion()?30:650);
-    if(token!==transitionToken)return;state.transitioning=false;state.inputLockedUntil=Date.now()+60;
+    clearSpecialOverlays();$('storyFxLayer').dataset.visualKey='';applyStoryPreviewMode();
+    if(chapterIntro){
+      await showChapterIntro(chapterIntro);if(token!==transitionToken)return;
+    }
+    renderLine();save();syncLayoutEditor();syncDirectorStatus();
+    state.cinematicExit=false;
+    if(endingToEpilogue){
+      // The screen is already fully black. Drop the fade layer behind the epilogue so its first line can begin cleanly on black.
+      fade.classList.remove('ending-fade');fade.style.setProperty('--transition-ms','650ms');await sleep(reducedMotion()?30:90);fade.classList.remove('opaque');await sleep(reducedMotion()?30:650);
+    }else{
+      fade.classList.remove('opaque');if(locationChanged&&!first)await sleep(reducedMotion()?30:650);
+    }
+    if(token!==transitionToken)return;fade.style.setProperty('--transition-ms','650ms');state.transitioning=false;state.inputLockedUntil=Date.now()+60;
     preloadScene(state.sceneIndex+1,{characterLimit:2});
   }
 
@@ -954,7 +989,7 @@
 
   ['secretTitle','chapterLabel','sceneLabel'].forEach(id=>$(id)?.addEventListener('pointerup',secretTap));
   $('startBtn').onclick=()=>{state.hintShows=0;haptic(12);enterScene(0,0,{first:true})};
-  const saved=load();if(saved){$('continueBtn').classList.remove('hidden');$('continueBtn').onclick=()=>{const i=studentScenes.findIndex(s=>s.id===saved.sceneId);haptic(12);state.restoreNarrationPage=saved.narrationPage||0;enterScene(i>=0?i:0,saved.lineIndex||0,{first:true})}}
+  const saved=load();if(saved){$('continueBtn').classList.remove('hidden');$('continueBtn').classList.remove('ghost-btn');$('continueBtn').classList.add('primary-btn');$('startBtn').classList.remove('primary-btn');$('startBtn').classList.add('ghost-btn');$('startBtn').textContent='처음부터 시작';$('continueBtn').onclick=()=>{const i=studentScenes.findIndex(s=>s.id===saved.sceneId);haptic(12);state.restoreNarrationPage=saved.narrationPage||0;enterScene(i>=0?i:0,saved.lineIndex||0,{first:true})}}
   $('nextBtn').onclick=e=>{e.stopPropagation();requestAdvance()};$('dialoguePanel').onclick=requestAdvance;
   $('storyScreen').addEventListener('click',e=>{if(!e.target.closest('button')&&!e.target.closest('#dialoguePanel'))requestAdvance()});
   function closeStudentMenu(){$('studentMenu')?.classList.add('hidden');$('studentMenu')?.setAttribute('aria-hidden','true')}
