@@ -698,7 +698,7 @@ window.THREE_JACKS_STORY = {
       "lines": [
         {
           "type": "narration",
-          "text": "서아프리카의 마을. 잭은 사냥과 경계를 맡는 건장한 전사다. 잭의 연인 아미나는 그를 기다리고 있다."
+          "text": "서아프리카의 마을. 잭은 사냥과 경계를 맡는 건장한 전사다. 잭의 연인 말라이카는 그를 기다리고 있다."
         },
         {
           "type": "dialogue",
@@ -712,16 +712,16 @@ window.THREE_JACKS_STORY = {
         },
         {
           "type": "dialogue",
-          "speaker": "아미나",
+          "speaker": "말라이카",
           "text": "어제 나한테 졌잖아."
         },
         {
           "type": "narration",
-          "text": "아미나가 웃으며 잭의 팔에 작은 끈 장식을 묶어준다."
+          "text": "말라이카가 웃으며 잭의 팔에 작은 끈 장식을 묶어준다."
         },
         {
           "type": "dialogue",
-          "speaker": "아미나",
+          "speaker": "말라이카",
           "text": "힘만 믿다가 큰코다치지 마."
         },
         {
@@ -776,12 +776,12 @@ window.THREE_JACKS_STORY = {
         },
         {
           "type": "dialogue",
-          "speaker": "아미나",
+          "speaker": "말라이카",
           "text": "아이들은 내가 데리고 갈게!"
         },
         {
           "type": "narration",
-          "text": "하지만 숫자가 너무 많다. 잭도 붙잡혀 긴 행렬에 연결된다. 뒤에서 손목이 붙들렸다. 숲으로 향하던 아미나의 모습이 사람들 사이로 가려졌다.",
+          "text": "하지만 숫자가 너무 많다. 잭도 붙잡혀 긴 행렬에 연결된다. 뒤에서 손목이 붙들렸다. 숲으로 향하던 말라이카의 모습이 사람들 사이로 가려졌다.",
           "urgent": true
         },
         {
@@ -792,7 +792,7 @@ window.THREE_JACKS_STORY = {
         },
         {
           "type": "narration",
-          "text": "아미나의 목소리가 잠깐 들리다가 사람들의 소음 속에 사라진다."
+          "text": "말라이카의 목소리가 잠깐 들리다가 사람들의 소음 속에 사라진다."
         },
         {
           "type": "dialogue",
@@ -826,7 +826,7 @@ window.THREE_JACKS_STORY = {
         },
         {
           "type": "dialogue",
-          "speaker": "아미나",
+          "speaker": "말라이카",
           "text": "너까지 쓰러지면 안 돼."
         },
         {
@@ -883,7 +883,7 @@ window.THREE_JACKS_STORY = {
         },
         {
           "type": "narration",
-          "text": "잭에게도 값이 매겨진다. 그는 아미나의 끈 장식을 손안에 숨긴다."
+          "text": "잭에게도 값이 매겨진다. 그는 말라이카의 끈 장식을 손안에 숨긴다."
         },
         {
           "type": "narration",
@@ -917,7 +917,7 @@ window.THREE_JACKS_STORY = {
         {
           "type": "dialogue",
           "speaker": "잭",
-          "text": "아미나 못 봤어? 팔에 이런 끈을 하고 있어."
+          "text": "말라이카 못 봤어? 팔에 이런 끈을 하고 있어."
         },
         {
           "type": "dialogue",
@@ -1093,7 +1093,7 @@ window.THREE_JACKS_STORY = {
         },
         {
           "type": "narration",
-          "text": "어깨는 처지고 얼굴은 야위었다. 그래도 손에는 아미나의 끈 장식이 남아 있다."
+          "text": "어깨는 처지고 얼굴은 야위었다. 그래도 손에는 말라이카의 끈 장식이 남아 있다."
         },
         {
           "type": "dialogue",
