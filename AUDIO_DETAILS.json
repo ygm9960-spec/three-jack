@@ -1,0 +1,55 @@
+{
+  "tracks": [
+    {
+      "file": "01_three_jacks_theme.mp3",
+      "duration": 144.6135,
+      "rms": 0.17753841048422964,
+      "peak": 0.8884796500205994
+    },
+    {
+      "file": "02_ch1_home.mp3",
+      "duration": 142.0135,
+      "rms": 0.16155721764641404,
+      "peak": 1
+    },
+    {
+      "file": "03_ch1_silver_and_silence.mp3",
+      "duration": 113.8135,
+      "rms": 0.2325453459082925,
+      "peak": 1
+    },
+    {
+      "file": "04_ch2_guns_and_march.mp3",
+      "duration": 17.9735,
+      "rms": 0.13738486851762413,
+      "peak": 0.8724030256271362
+    },
+    {
+      "file": "05_ch2_atlantic.mp3",
+      "duration": 148.6135,
+      "rms": 0.21229123880830195,
+      "peak": 0.9770140051841736
+    },
+    {
+      "file": "06_ch3_silver_city.mp3",
+      "duration": 139.0135,
+      "rms": 0.18574870176509373,
+      "peak": 0.9057145118713379
+    },
+    {
+      "file": "07_ch3_price_of_prosperity.mp3",
+      "duration": 149.1735,
+      "rms": 0.1617290435179736,
+      "peak": 0.9832402467727661
+    }
+  ],
+  "playbackVolumes": {
+    "01_three_jacks_theme.mp3": 0.282,
+    "02_ch1_home.mp3": 0.309,
+    "03_ch1_silver_and_silence.mp3": 0.215,
+    "04_ch2_guns_and_march.mp3": 0.364,
+    "05_ch2_atlantic.mp3": 0.236,
+    "06_ch3_silver_city.mp3": 0.269,
+    "07_ch3_price_of_prosperity.mp3": 0.309
+  }
+}

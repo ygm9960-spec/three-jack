@@ -1,0 +1,35 @@
+구분,웹앱 자산,원본 이미지,용도/보정
+캐릭터,america_jack_healthy.webp,고난을_견딘_원주민_전사_초상.png,아메리카 잭 건강/초반 · 성인 기준 94%
+캐릭터,america_jack_laboring.webp,깃털_장식의_고요한_전사_노동자.png,은광 노동
+캐릭터,america_jack_sick.webp,병든_영혼의_아메리카_잭.png,병듦/쇠약
+캐릭터,america_jack_critical.webp,상처_입은_아메리카_잭의_마지막_순간.png,마지막 상태
+캐릭터,ch1_father.webp,존엄한_부족_장로_전사.png,아버지 · 잭보다 크게 98%
+캐릭터,ch1_mother.webp,담요를_꼭_여민_원주민_여성.png,어머니 91%
+캐릭터,ch1_sister.webp,깃털_장식의_소녀_전사.png,여동생 88%
+캐릭터,ch1_brother1.webp,깃털_장식의_결연한_전사_소년.png,첫째 남동생 87%
+캐릭터,ch1_youngest.webp,겁에_질린_깃털_장식_소년_캐릭터.png,막내 75% · 확실한 체격차
+캐릭터,africa_jack_warrior.webp,아프리카풍_장신구의_위엄_있는_전사.png,건장한 기본형
+캐릭터,africa_jack_captured.webp,포박된_전사의_분노와_저항.png,포획
+캐릭터,africa_jack_bound.webp,쇠사슬에_묶인_아프리카_잭.png,강제 이동/결박
+캐릭터,africa_jack_gaunt.webp,상처_입은_아프리카_잭의_초상.png,대서양 이후 쇠약
+캐릭터,ch2_lover.webp,a_clean_studio_like_high_quality_digital_illustr.png,사용자 선택 2번째 연인 이미지
+캐릭터,europe_jack_child.webp,눈물_맺힌_가난한_청년_잭.png,빵·약·가난
+캐릭터,europe_jack_young_hopeful.webp,바람에_흩날리는_떠돌이_모험가.png,초기 기본형
+캐릭터,europe_jack_grieving.webp,비탄에_잠긴_유럽_청년_캐릭터.png,어머니 상실
+캐릭터,europe_jack_merchant.webp,냉정한_장부를_든_상인_jack.png,흑화/상인
+캐릭터,europe_jack_rich.webp,오만한_귀족_상인의_초상.png,거상
+캐릭터,europe_jack_ruined.webp,절망에_빠진_상인의_청구서.png,파산 위기
+캐릭터,europe_jack_ruined_sick.webp,무너진_사나이의_마지막_병잔.png,마지막 고독
+캐릭터,ch3_mother.webp,병든_어머니의_애절한_초상.png,유럽 잭 어머니
+캐릭터,ch3_recruiter.webp,문서를_건네는_수상한_상인.png,사기 상인/투자 모집인 통합
+캐릭터,ch3_tom.webp,a_detailed_high_quality_character_illustration_po.png,붉은 짧은 머리로 주인공과 구분한 톰
+배경,bg_ch1_home.webp,평화로운_원주민_마을_풍경.png,CH1 마을 · 9:16 중앙 크롭
+배경,bg_ch1_silver_mine.webp,어둡고_장엄한_은광의_지하_터널.png,은광
+배경,bg_ch1_mine_plantation.webp,황금빛_대농장과_풍성한_수확_풍경.png,넓고 노동량 많은 플랜테이션
+배경,bg_ch2_village.webp,따스한_아프리카_마을_뜰_풍경.png,CH2 평화로운 마을
+배경,bg_ch2_forced_march.webp,해안_요새로_향하는_버려진_길.png,강제 이동/해안
+배경,bg_ch2_ship_hold.webp,어두운_목조_선박_화물창_내부.png,노예선 내부
+배경,bg_ch2_zong_deck.webp,폭풍_속_노예선_갑판.png,대서양/갑판
+배경,bg_ch3_market_medicine.webp,유럽_항구_시장_거리_풍경.png,시장·약방·항구
+배경,bg_ch3_mother_room.webp,촛불과_겨울빛의_낡은_침실.png,어머니 방/마지막 방 재사용
+배경,bg_ch3_merchant_office.webp,항구가_보이는_고풍스러운_무역_사무실.png,투자/상업/거상 사무실 재사용

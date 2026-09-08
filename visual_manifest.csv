@@ -1,0 +1,23 @@
+﻿scene_id,visual_type,purpose,status
+prologue,worldNetwork,세 대륙 연결,완료
+ch1-s03,familyStatus,가족 4방향 분리,완료
+ch1-s05,familyStatus,가족 부상·질병 소식,완료
+ch1-s08,familyStatus,가족 소식 단절,완료
+ch1-end,populationDecline,PPT 인구 급감 그래프,완료
+ch1-end,laborLedger,노동인원↓ / 생산목표 유지,완료
+ch1-end,africaFocus,아프리카 지도 포커스,완료
+ch2-s01,bodyArc,건장한 전사,완료
+ch2-s04,displacement,강제 이동·관계 단절,완료
+ch2-s06,shipHold,선창 과밀,완료
+ch2-s07,bodyArc/nameMemory,야윔·이름 기억,완료
+ch2-s09,identity,번호 vs 잭,완료
+ch2-end,triangleTrade,삼각무역,완료
+ch3-s01,priceRevolution,"같은 돈, 빵·약 감소",완료
+ch3-s05,darkTurn,상처→분노→욕망,완료
+ch3-s06,dualGauge,재산↑ 신뢰↓,완료
+ch3-s07,betrayal,투자 사기 반복,완료
+ch3-s08,dualGauge/triangleLedger,거상·금빛 장부,완료
+ch3-s09,collapse,신용·재산·관계 붕괴,완료
+ch3-s10,lonelyRoom,동전·약병·장부,완료
+ch3-end,causalChain,가격혁명→상업혁명→금융,완료
+epilogue,epilogueThreads,세 잭 수미상관,완료

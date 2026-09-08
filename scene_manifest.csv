@@ -1,0 +1,35 @@
+﻿scene_id,chapter,title,background_file,bgm_file,line_count
+prologue,ch1,PROLOGUE. 여기 세 명의 잭이 있다,bg_atlantic_triangle.webp,01_prologue.mp3,5
+ch1-s01,ch1,SCENE 1. 여섯 사람이 있던 집,bg_ch1_home.webp,02_ch1_home.mp3,17
+ch1-s02,ch1,SCENE 2. 처음에는 은을 요구했다,bg_ch1_arrival.webp,03_ch1_ominous.mp3,7
+ch1-s03,ch1,SCENE 3. 명단에 가족의 이름이 올라가다,bg_ch1_roundup.webp,04_ch1_separation.mp3,16
+ch1-s04,ch1,SCENE 4. 은광과 플랜테이션,bg_ch1_mine_plantation.webp,05_ch1_labor.mp3,6
+ch1-s05,ch1,SCENE 5. 겨우 닿는 소식,bg_ch1_message_route.webp,06_ch1_messages.mp3,13
+ch1-s06,ch1,SCENE 6. 은은 쌓이고 사람은 지친다,bg_ch1_silver_mine.webp,05_ch1_labor.mp3,8
+ch1-s07,ch1,SCENE 7. 열이 오르다,bg_ch1_mine_sick.webp,07_ch1_sickness.mp3,10
+ch1-s08,ch1,SCENE 8. 가족의 소식도 하나씩 끊기다,bg_ch1_message_route.webp,06_ch1_messages.mp3,14
+ch1-s09,ch1,SCENE 9. 마지막 밤,bg_ch1_last_night.webp,08_ch1_last_night.mp3,14
+ch1-end,ch1,CHAPTER 1 END. 사람이 사라진 자리,bg_ch1_empty_village_map.webp,09_transition_africa.mp3,9
+ch2-s01,ch2,SCENE 1. 마을의 전사,bg_ch2_village.webp,10_ch2_village.mp3,7
+ch2-s02,ch2,SCENE 2. 총이 들어온 뒤,bg_ch2_market_guns.webp,11_ch2_tension.mp3,3
+ch2-s03,ch2,SCENE 3. 습격,bg_ch2_raid.webp,12_ch2_raid.mp3,7
+ch2-s04,ch2,SCENE 4. 해안으로 가는 길,bg_ch2_forced_march.webp,13_ch2_march.mp3,8
+ch2-s05,ch2,SCENE 5. 해안 집결지 - 이름이 숫자가 되다,bg_ch2_coast_depot.webp,14_ch2_coast.mp3,7
+ch2-s06,ch2,SCENE 6. 배에 사람을 채우다,bg_ch2_ship_hold.webp,15_ch2_ship_hold.mp3,6
+ch2-s07,ch2,SCENE 7. 대서양 - 몸이 변해 가다,bg_ch2_middle_passage.webp,16_ch2_middle_passage.mp3,10
+ch2-s08,ch2,SCENE 8. 어느 밤 - 종(Zong)호,bg_ch2_zong_deck.webp,17_ch2_zong.mp3,17
+ch2-s09,ch2,SCENE 9. 살아서 도착했다,bg_ch2_america_port.webp,18_ch2_arrival.mp3,18
+ch2-end,ch2,CHAPTER 2 END. 삼각형,bg_atlantic_triangle.webp,19_triangle_trade.mp3,4
+ch2-teacher-notes,ch2,교사용 역사 메모,,,2
+ch3-s01,ch3,SCENE 1. 빵과 약,bg_ch3_market_medicine.webp,20_ch3_poverty.mp3,15
+ch3-s02,ch3,SCENE 2. 바다 위의 황금,bg_ch3_investment_square.webp,21_ch3_hope.mp3,11
+ch3-s03,ch3,SCENE 3. 빈 사무실,bg_ch3_empty_office.webp,22_ch3_loss.mp3,9
+ch3-s04,ch3,SCENE 4. 돈이 없다는 이유,bg_ch3_mother_room.webp,23_ch3_mother.mp3,20
+ch3-s05,ch3,SCENE 5. 흑화 - 다시는 빼앗기지 않겠다,bg_ch3_harbor_night.webp,24_ch3_dark_turn.mp3,10
+ch3-s06,ch3,SCENE 6. 돈의 문법을 배우다,bg_ch3_merchant_office.webp,25_ch3_rise.mp3,12
+ch3-s07,ch3,SCENE 7. 친구에게도 같은 짓을 하다,bg_ch3_trade_office.webp,26_ch3_betrayal.mp3,13
+ch3-s08,ch3,SCENE 8. 금빛 장부,bg_ch3_golden_ledger.webp,27_ch3_wealth.mp3,6
+ch3-s09,ch3,SCENE 9. 모두가 떠나는 날,bg_ch3_credit_crisis.webp,28_ch3_collapse.mp3,21
+ch3-s10,ch3,SCENE 10. 빈방,bg_ch3_empty_room.webp,29_ch3_empty_room.mp3,17
+ch3-end,ch3,CHAPTER 3 END. 번영의 가격,bg_ch3_harbor_ledger.webp,30_ch3_end.mp3,1
+epilogue,ch3,EPILOGUE. 그곳엔 세 명의 잭이 있었다,bg_atlantic_triangle.webp,31_epilogue.mp3,7

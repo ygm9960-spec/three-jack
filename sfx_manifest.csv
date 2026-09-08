@@ -1,0 +1,14 @@
+﻿cue_name,filename,trigger_regex,status
+knock,door_knock.mp3,문을 두드|문 두드|노크,파일 추가 시 자동 재생
+cough,cough_soft.mp3,기침|열이|열은|병든|아팠|아픈,파일 추가 시 자동 재생
+coin,coins.mp3,동전|돈을 내|은화,파일 추가 시 자동 재생
+paper,paper_ledger.mp3,장부|명단|계약|기록,파일 추가 시 자동 재생
+waves,waves.mp3,파도|대서양|바다,파일 추가 시 자동 재생
+ship,ship_creak.mp3,선창|배 안|배에 사람|갑판|노예선,파일 추가 시 자동 재생
+crowd,crowd_murmur.mp3,시장|사람들이 모|집결지,파일 추가 시 자동 재생
+metal,metal_chain.mp3,쇠사슬|사슬|묶,파일 추가 시 자동 재생
+impact,impact_soft.mp3,습격|총성|총을|끌고 갔|끌려,파일 추가 시 자동 재생
+heartbeat,heartbeat.mp3,눈물이|두려|무서|마지막 밤|죽,파일 추가 시 자동 재생
+fire,fire_ambience.mp3,불빛|횃불|불이,파일 추가 시 자동 재생
+page,page_turn.mp3,초록색|핵심 개념|그래프,파일 추가 시 자동 재생
+teacher_test,sfx_test.wav,교사용 메뉴 버튼,현재 포함

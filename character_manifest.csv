@@ -1,0 +1,82 @@
+﻿scene_id,scene_title,character_id,display_name,state,recommended_asset,camera
+ch1-s01,SCENE 1. 여섯 사람이 있던 집,jack_america,아메리카의 잭,healthy,america_jack_healthy.webp,slow-in
+ch1-s01,SCENE 1. 여섯 사람이 있던 집,father,아버지,healthy,ch1_father_healthy.webp,slow-in
+ch1-s01,SCENE 1. 여섯 사람이 있던 집,mother_ch1,어머니,healthy,ch1_mother_healthy.webp,slow-in
+ch1-s01,SCENE 1. 여섯 사람이 있던 집,sister,여동생,healthy,ch1_sister_healthy.webp,slow-in
+ch1-s01,SCENE 1. 여섯 사람이 있던 집,brother1,첫째 남동생,healthy,ch1_brother1_healthy.webp,slow-in
+ch1-s01,SCENE 1. 여섯 사람이 있던 집,youngest,막내,healthy,ch1_youngest_healthy.webp,slow-in
+ch1-s02,SCENE 2. 처음에는 은을 요구했다,jack_america,아메리카의 잭,alert,america_jack_alert.webp,pan-right
+ch1-s02,SCENE 2. 처음에는 은을 요구했다,interpreter,통역,neutral,ch1_interpreter_neutral.webp,pan-right
+ch1-s02,SCENE 2. 처음에는 은을 요구했다,elder_ch1,마을 어른,worried,ch1_elder_worried.webp,pan-right
+ch1-s03,SCENE 3. 명단에 가족의 이름이 올라가다,jack_america,아메리카의 잭,shaken,america_jack_shaken.webp,slow-in
+ch1-s03,SCENE 3. 명단에 가족의 이름이 올라가다,father,아버지,tense,ch1_father_tense.webp,slow-in
+ch1-s03,SCENE 3. 명단에 가족의 이름이 올라가다,mother_ch1,어머니,worried,ch1_mother_worried.webp,slow-in
+ch1-s03,SCENE 3. 명단에 가족의 이름이 올라가다,sister,여동생,afraid,ch1_sister_afraid.webp,slow-in
+ch1-s03,SCENE 3. 명단에 가족의 이름이 올라가다,brother1,첫째 남동생,determined,ch1_brother1_determined.webp,slow-in
+ch1-s04,SCENE 4. 은광과 플랜테이션,jack_america,아메리카의 잭,laboring,america_jack_laboring.webp,pan-left
+ch1-s04,SCENE 4. 은광과 플랜테이션,carrier,운반꾼,tired,ch1_carrier_tired.webp,pan-left
+ch1-s05,SCENE 5. 겨우 닿는 소식,jack_america,아메리카의 잭,tired,america_jack_tired.webp,slow-out
+ch1-s05,SCENE 5. 겨우 닿는 소식,carrier,운반꾼,tired,ch1_carrier_tired.webp,slow-out
+ch1-s05,SCENE 5. 겨우 닿는 소식,sister,여동생,tired,ch1_sister_tired.webp,slow-out
+ch1-s05,SCENE 5. 겨우 닿는 소식,brother1,첫째 남동생,tired,ch1_brother1_tired.webp,slow-out
+ch1-s06,SCENE 6. 은은 쌓이고 사람은 지친다,jack_america,아메리카의 잭,exhausted,america_jack_exhausted.webp,slow-in
+ch1-s06,SCENE 6. 은은 쌓이고 사람은 지친다,coworker_ch1,동료,exhausted,ch1_coworker_exhausted.webp,slow-in
+ch1-s07,SCENE 7. 열이 오르다,jack_america,아메리카의 잭,sick,america_jack_sick.webp,slow-in
+ch1-s07,SCENE 7. 열이 오르다,coworker_ch1,동료,worried,ch1_coworker_worried.webp,slow-in
+ch1-s07,SCENE 7. 열이 오르다,supervisor_ch1,감독,cold,ch1_supervisor_cold.webp,slow-in
+ch1-s08,SCENE 8. 가족의 소식도 하나씩 끊기다,jack_america,아메리카의 잭,weakened,america_jack_weakened.webp,slow-out
+ch1-s08,SCENE 8. 가족의 소식도 하나씩 끊기다,carrier,운반꾼,somber,ch1_carrier_somber.webp,slow-out
+ch1-s09,SCENE 9. 마지막 밤,jack_america,아메리카의 잭,critical,america_jack_critical.webp,slow-in
+ch1-s09,SCENE 9. 마지막 밤,coworker_ch1,동료,sad,ch1_coworker_sad.webp,slow-in
+ch1-end,CHAPTER 1 END. 사람이 사라진 자리,manager,관리인,worried,ch1_manager_worried.webp,pan-right
+ch2-s01,SCENE 1. 마을의 전사,jack_africa,아프리카의 잭,warrior,africa_jack_warrior.webp,slow-in
+ch2-s01,SCENE 1. 마을의 전사,lover,연인,healthy,ch2_lover_healthy.webp,slow-in
+ch2-s01,SCENE 1. 마을의 전사,friend,친구,healthy,ch2_friend_healthy.webp,slow-in
+ch2-s01,SCENE 1. 마을의 전사,child_ch2,어린 부족원,healthy,ch2_child_healthy.webp,slow-in
+ch2-s02,SCENE 2. 총이 들어온 뒤,jack_africa,아프리카의 잭,warrior,africa_jack_warrior.webp,pan-left
+ch2-s02,SCENE 2. 총이 들어온 뒤,elder_ch2,부족의 어른,worried,ch2_elder_worried.webp,pan-left
+ch2-s03,SCENE 3. 습격,jack_africa,아프리카의 잭,captured,africa_jack_captured.webp,shake-soft
+ch2-s03,SCENE 3. 습격,friend,친구,panicked,ch2_friend_panicked.webp,shake-soft
+ch2-s04,SCENE 4. 해안으로 가는 길,jack_africa,아프리카의 잭,bound,africa_jack_bound.webp,pan-right
+ch2-s04,SCENE 4. 해안으로 가는 길,child_ch2,어린 부족원,tired,ch2_child_tired.webp,pan-right
+ch2-s04,SCENE 4. 해안으로 가는 길,friend,친구,tired,ch2_friend_tired.webp,pan-right
+ch2-s05,SCENE 5. 해안 집결지 - 이름이 숫자가 되다,jack_africa,아프리카의 잭,exhausted,africa_jack_exhausted.webp,slow-in
+ch2-s05,SCENE 5. 해안 집결지 - 이름이 숫자가 되다,euro_trader,유럽 상인,cold,ch2_euro_trader_cold.webp,slow-in
+ch2-s05,SCENE 5. 해안 집결지 - 이름이 숫자가 되다,trader,상인,neutral,ch2_trader_neutral.webp,slow-in
+ch2-s06,SCENE 6. 배에 사람을 채우다,jack_africa,아프리카의 잭,weakened,africa_jack_weakened.webp,slow-in
+ch2-s06,SCENE 6. 배에 사람을 채우다,stranger,낯선 사람,weakened,ch2_stranger_weakened.webp,slow-in
+ch2-s07,SCENE 7. 대서양 - 몸이 변해 가다,jack_africa,아프리카의 잭,gaunt,africa_jack_gaunt.webp,slow-out
+ch2-s07,SCENE 7. 대서양 - 몸이 변해 가다,amada,아마다,gaunt,ch2_amada_gaunt.webp,slow-out
+ch2-s07,SCENE 7. 대서양 - 몸이 변해 가다,stranger,낯선 사람,gaunt,ch2_stranger_gaunt.webp,slow-out
+ch2-s08,SCENE 8. 어느 밤 - 종(Zong)호,jack_africa,아프리카의 잭,gaunt,africa_jack_gaunt.webp,shake-soft
+ch2-s08,SCENE 8. 어느 밤 - 종(Zong)호,captain,선장,cold,ch2_captain_cold.webp,shake-soft
+ch2-s08,SCENE 8. 어느 밤 - 종(Zong)호,stranger,낯선 사람,terrified,ch2_stranger_terrified.webp,shake-soft
+ch2-s09,SCENE 9. 살아서 도착했다,jack_africa,아프리카의 잭,gaunt_arrival,africa_jack_gaunt_arrival.webp,slow-in
+ch2-s09,SCENE 9. 살아서 도착했다,supervisor_ch2,감독,cold,ch2_supervisor_cold.webp,slow-in
+ch3-s01,SCENE 1. 빵과 약,jack_europe,유럽의 잭,child,europe_jack_child.webp,slow-in
+ch3-s01,SCENE 1. 빵과 약,mother_ch3,어머니,sick,ch3_mother_sick.webp,slow-in
+ch3-s01,SCENE 1. 빵과 약,market_merchant,시장 상인,cold,ch3_market_merchant_cold.webp,slow-in
+ch3-s01,SCENE 1. 빵과 약,pharmacist,약사,neutral,ch3_pharmacist_neutral.webp,slow-in
+ch3-s02,SCENE 2. 바다 위의 황금,jack_europe,유럽의 잭,young_hopeful,europe_jack_young_hopeful.webp,pan-right
+ch3-s02,SCENE 2. 바다 위의 황금,recruiter,투자 모집인,smiling,ch3_recruiter_smiling.webp,pan-right
+ch3-s02,SCENE 2. 바다 위의 황금,tom,톰,young,ch3_tom_young.webp,pan-right
+ch3-s03,SCENE 3. 빈 사무실,jack_europe,유럽의 잭,shocked,europe_jack_shocked.webp,slow-out
+ch3-s03,SCENE 3. 빈 사무실,landlord,건물 주인,neutral,ch3_landlord_neutral.webp,slow-out
+ch3-s04,SCENE 4. 돈이 없다는 이유,jack_europe,유럽의 잭,grieving,europe_jack_grieving.webp,slow-in
+ch3-s04,SCENE 4. 돈이 없다는 이유,mother_ch3,어머니,critical,ch3_mother_critical.webp,slow-in
+ch3-s04,SCENE 4. 돈이 없다는 이유,pharmacist,약사,neutral,ch3_pharmacist_neutral.webp,slow-in
+ch3-s05,SCENE 5. 흑화 - 다시는 빼앗기지 않겠다,jack_europe,유럽의 잭,hardened,europe_jack_hardened.webp,slow-in
+ch3-s05,SCENE 5. 흑화 - 다시는 빼앗기지 않겠다,tom,톰,concerned,ch3_tom_concerned.webp,slow-in
+ch3-s06,SCENE 6. 돈의 문법을 배우다,jack_europe,유럽의 잭,merchant,europe_jack_merchant.webp,pan-left
+ch3-s06,SCENE 6. 돈의 문법을 배우다,mentor,스승 상인,cold,ch3_mentor_cold.webp,pan-left
+ch3-s06,SCENE 6. 돈의 문법을 배우다,small_merchant,작은 상인,worried,ch3_small_merchant_worried.webp,pan-left
+ch3-s07,SCENE 7. 친구에게도 같은 짓을 하다,jack_europe,유럽의 잭,merchant_cold,europe_jack_merchant_cold.webp,slow-in
+ch3-s07,SCENE 7. 친구에게도 같은 짓을 하다,tom,톰,worried,ch3_tom_worried.webp,slow-in
+ch3-s08,SCENE 8. 금빛 장부,jack_europe,유럽의 잭,rich,europe_jack_rich.webp,slow-in
+ch3-s08,SCENE 8. 금빛 장부,accountant,회계사,neutral,ch3_accountant_neutral.webp,slow-in
+ch3-s09,SCENE 9. 모두가 떠나는 날,jack_europe,유럽의 잭,ruined,europe_jack_ruined.webp,shake-soft
+ch3-s09,SCENE 9. 모두가 떠나는 날,accountant,회계사,tense,ch3_accountant_tense.webp,shake-soft
+ch3-s09,SCENE 9. 모두가 떠나는 날,small_merchant,작은 상인,cold,ch3_small_merchant_cold.webp,shake-soft
+ch3-s09,SCENE 9. 모두가 떠나는 날,old_partner,옛 동업자,cold,ch3_old_partner_cold.webp,shake-soft
+ch3-s09,SCENE 9. 모두가 떠나는 날,tom,톰,cold,ch3_tom_cold.webp,shake-soft
+ch3-s10,SCENE 10. 빈방,jack_europe,유럽의 잭,ruined_sick,europe_jack_ruined_sick.webp,slow-out

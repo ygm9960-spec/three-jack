@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#111318" />
+  <title>세 명의 잭</title>
+  <link rel="stylesheet" href="./css/style.css?v=0.25" />
+</head>
+<body>
+  <div id="bootOverlay" class="boot-overlay" aria-live="polite">
+    <div class="boot-inner">
+      <span class="boot-kicker">HISTORY STORY SIMULATION</span>
+      <strong>세 명의 잭</strong>
+      <div class="boot-line"><i id="bootProgress"></i></div>
+      <small id="bootText">이야기를 준비하고 있습니다…</small>
+    </div>
+  </div>
+  <main id="app" class="app-shell">
+    <section id="titleScreen" class="screen title-screen active">
+      <div class="title-vignette"></div>
+      <div class="title-content">
+        <p class="eyebrow">HISTORY STORY SIMULATION</p>
+        <h1 id="secretTitle" class="secret-title" aria-label="세 명의 잭">세 명의 잭</h1>
+        <p class="title-copy">아메리카 · 아프리카 · 유럽<br>세 사람의 삶이 하나의 바닷길에서 이어진다.</p>
+        <div class="title-actions">
+          <button id="startBtn" class="primary-btn">이야기 시작</button>
+          <button id="continueBtn" class="ghost-btn hidden">이어보기</button>
+        </div>
+        <p class="tap-hint">스마트폰 세로 화면에 최적화되어 있습니다</p>
+      </div>
+    </section>
+
+    <section id="storyScreen" class="screen story-screen" aria-live="polite">
+      <div id="backdrop" class="backdrop"><div class="backdrop-fallback"></div></div>
+      <div class="cinema-shade"></div>
+
+      <div id="characterLayer" class="character-layer" aria-hidden="true">
+        <div id="charLeft" class="character-slot slot-left"></div>
+        <div id="charCenter" class="character-slot slot-center"></div>
+        <div id="charRight" class="character-slot slot-right"></div>
+      </div>
+      <div id="storyFxLayer" class="story-fx-layer" aria-hidden="true"></div>
+      <div id="timePlaceOverlay" class="time-place-overlay hidden" aria-hidden="true">
+        <small id="timePlaceKicker">SCENE</small>
+        <strong id="timePlaceText"></strong>
+        <span id="timePlaceSub"></span>
+      </div>
+      <div id="epilogueOverlay" class="epilogue-overlay hidden" aria-live="polite">
+        <small id="bookendKicker">EPILOGUE</small>
+        <p id="bookendText"></p>
+        <span id="bookendHint">탭하여 계속 ›</span>
+      </div>
+
+      <header class="story-topbar">
+        <button id="studentMenuBtn" class="icon-btn" aria-label="메뉴 열기">⋯</button>
+        <div class="scene-meta"><span id="chapterLabel"></span><small id="sceneLabel"></small></div>
+        <button id="logBtn" class="icon-btn" aria-label="지난 대사 보기">☷</button>
+      </header>
+      <div id="studentMenu" class="student-menu hidden" aria-hidden="true">
+        <button id="soundBtn" class="student-menu-item" type="button"><span>♪</span><b>소리</b><small id="soundStateText">켜짐</small></button>
+        <button id="homeBtn" class="student-menu-item" type="button"><span>⌂</span><b>처음 화면</b><small>진행상황은 저장됩니다</small></button>
+      </div>
+      <div class="story-progress" aria-hidden="true"><i id="storyProgressBar"></i></div>
+      <aside id="populationHud" class="population-hud" hidden aria-label="원주민 인구 감소, 서사 진행에 따른 개념 표현"><strong id="populationHudLabel"></strong><div class="population-mini-track"><i id="populationFill"></i></div><small>이야기 진행에 따른 개념도</small></aside>
+      <div id="stageCaption" class="stage-caption hidden"></div>
+      <div id="conceptCard" class="concept-card hidden"></div>
+      <section id="dialoguePanel" class="dialogue-panel" tabindex="0">
+        <div class="speaker-row"><span id="speakerName"></span><span id="lineCounter"></span></div>
+        <p id="dialogueText" class="dialogue-text"></p>
+        <div class="dialogue-footer"><span id="nextHint">탭하여 계속 ›</span><button id="nextBtn" class="next-btn" aria-label="다음 대사">▶</button></div>
+      </section>
+      <div id="appToast" class="app-toast" role="status" aria-live="polite"></div>
+      <div id="sceneFade" class="scene-fade" aria-hidden="true"></div>
+    </section>
+
+    <aside id="logPanel" class="log-panel" aria-hidden="true">
+      <div class="log-head"><strong>지난 대사</strong><button id="closeLogBtn" class="icon-btn" aria-label="지난 대사 닫기">✕</button></div>
+      <div id="logList" class="log-list"></div>
+      <p class="log-empty" id="logEmpty">아직 기록된 대사가 없습니다.</p>
+    </aside>
+
+    <aside id="teacherPanel" class="teacher-panel" aria-hidden="true">
+      <div class="teacher-head">
+        <div><strong>교사용 장면·배치 조정</strong><small>PIN 없음 · 제목 5회 탭으로 진입</small></div>
+        <button id="closeTeacherBtn" class="icon-btn" aria-label="교사용 메뉴 닫기">✕</button>
+      </div>
+      <div class="teacher-tools">
+        <label><input id="showStageToggle" type="checkbox"> 무대지시 디버그</label>
+        <label><input id="showCharacterToggle" type="checkbox" checked> 캐릭터 레이어</label>
+        <label><input id="showVisualToggle" type="checkbox" checked> 전용 시각연출</label>
+        <button id="restartSceneBtn" class="mini-btn">현재 장면 재시작</button>
+        <button id="restartAllBtn" class="mini-btn">처음부터</button>
+        <button id="hapticTestBtn" class="mini-btn">진동 테스트</button>
+        <button id="sfxTestBtn" class="mini-btn">효과음 테스트</button>
+        <button id="visualTestBtn" class="mini-btn">전용 연출 테스트</button>
+        <div class="engine-status">v0.19 안정성·경량화 · 브라우저 호환</div>
+      </div>
+
+      <section class="teacher-quicktest">
+        <div class="quicktest-card">
+          <h4>빠른 테스트</h4>
+          <div class="quicktest-grid">
+            <button id="teacherPrologueBtn" class="mini-btn" type="button">프롤로그</button>
+            <button id="teacherPrevSceneBtn" class="mini-btn" type="button">◀ 이전 장면</button>
+            <button id="teacherNextSceneBtn" class="mini-btn" type="button">다음 장면 ▶</button>
+            <button id="teacherNextKeyBtn" class="mini-btn" type="button">★ 다음 핵심 장면</button>
+            <button id="teacherEpilogueBtn" class="mini-btn" type="button">에필로그</button>
+            <button id="teacherUiOffBtn" class="mini-btn" type="button">학생 UI 토글</button>
+          </div>
+          <small>수업 전 장면 흐름·캐릭터 반응·화면 잘림을 빠르게 점검합니다.</small>
+        </div>
+      </section>
+      
+      <section class="teacher-layout">
+        <div class="layout-card">
+          <h4>장면 배치 미세조정</h4>
+          <div class="layout-row">
+            <label class="layout-inline">대상
+              <select id="layoutTarget" class="layout-select">
+                <option value="left">왼쪽 슬롯</option>
+                <option value="center">가운데 슬롯</option>
+                <option value="right">오른쪽 슬롯</option>
+                <option value="background">배경</option>
+              </select>
+            </label>
+            <label class="layout-inline"><input id="autoFaceToggle" type="checkbox" checked> 대화 시 서로 바라보기</label>
+            <label class="layout-inline"><input id="hideUiPreviewToggle" type="checkbox"> UI 숨기고 보기</label>
+          </div>
+          <div id="slotEditor">
+            <div class="layout-control"><span>X</span><input id="slotXRange" type="range" min="-18" max="18" step="1"><output id="slotXValue">0%</output></div>
+            <div class="layout-control"><span>Y</span><input id="slotYRange" type="range" min="-14" max="14" step="1"><output id="slotYValue">0%</output></div>
+            <div class="layout-control"><span>크기</span><input id="slotScaleRange" type="range" min="0.65" max="1.35" step="0.01"><output id="slotScaleValue">1.00</output></div>
+            <div class="layout-row">
+              <label class="layout-inline"><input id="slotFlipToggle" type="checkbox"> 좌우 반전</label>
+              <button id="resetTargetBtn" class="mini-btn" type="button">현재 대상 초기화</button>
+            </div>
+          </div>
+          <div id="backgroundEditor" class="hidden">
+            <div class="layout-control"><span>배경 X</span><input id="bgXRange" type="range" min="30" max="70" step="1"><output id="bgXValue">50%</output></div>
+            <div class="layout-control"><span>배경 Y</span><input id="bgYRange" type="range" min="28" max="70" step="1"><output id="bgYValue">50%</output></div>
+            <div class="layout-control"><span>줌</span><input id="bgZoomRange" type="range" min="100" max="132" step="1"><output id="bgZoomValue">108%</output></div>
+            <div class="layout-row">
+              <button id="resetBgBtn" class="mini-btn" type="button">배경 초기화</button>
+            </div>
+          </div>
+          <div class="layout-row">
+            <button id="resetSceneLayoutBtn" class="mini-btn" type="button">현재 장면 전체 초기화</button>
+          </div>
+          <div id="layoutStatus" class="layout-status">현재 장면 배치를 불러오는 중…</div>
+        </div>
+      </section>
+
+      <section class="teacher-director">
+        <div class="director-card">
+          <h4>대사 연출 디버거</h4>
+          <div class="director-controls">
+            <button id="teacherPrevLineBtn" class="mini-btn" type="button">◀ 이전 대사</button>
+            <button id="teacherReplayLineBtn" class="mini-btn" type="button">↻ 현재 대사</button>
+            <button id="teacherNextLineBtn" class="mini-btn" type="button">다음 대사 ▶</button>
+          </div>
+          <div class="director-jump">
+            <label>대사 번호 <input id="teacherLineInput" type="number" min="1" value="1"></label>
+            <button id="teacherLineJumpBtn" class="mini-btn" type="button">이동</button>
+          </div>
+          <div id="directorStatus" class="director-status">연출 큐를 불러오는 중…</div>
+          <div class="director-export">
+            <button id="exportLayoutBtn" class="mini-btn" type="button">현재 배치값 JSON 만들기</button>
+            <button id="copyLayoutBtn" class="mini-btn" type="button">JSON 복사</button>
+            <textarea id="layoutExportBox" readonly placeholder="배치값을 내보내면 여기에 JSON이 표시됩니다."></textarea>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="teacher-qa">
+        <div class="qa-card">
+          <h4>모바일 QA 메모</h4>
+          <div class="qa-actions">
+            <button id="bookmarkSceneBtn" class="mini-btn" type="button">☆ 현재 장면 문제 표시</button>
+            <button id="clearBookmarksBtn" class="mini-btn" type="button">표시 모두 지우기</button>
+          </div>
+          <div class="qa-note-editor">
+            <textarea id="qaNoteInput" maxlength="160" placeholder="예: 캐릭터 위치, 대사 어색함, 배경 수정 등"></textarea>
+            <button id="saveQaNoteBtn" class="mini-btn" type="button">현재 장면 메모 저장</button>
+          </div>
+          <div id="bookmarkList" class="bookmark-list"><small>표시된 장면이 없습니다.</small></div>
+        </div>
+      </section>
+
+      <div id="sceneNavigator" class="scene-navigator"></div>
+    </aside>
+    <div id="rotateHint" class="rotate-hint">세로로 돌리면 더 편하게 볼 수 있어요</div>
+  <dialog id="historyDialog" aria-labelledby="historyTitle"><p class="history-kicker">HISTORY NOTE</p><h2 id="historyTitle">역사노트</h2><div id="historyBody"></div><button id="historyClose" type="button">이야기 계속하기 ›</button></dialog>
+</main>
+  <audio id="bgmA" preload="none" loop></audio>
+  <audio id="bgmB" preload="none" loop></audio>
+  <audio id="sfxPlayer" preload="none"></audio>
+  <script src="./js/storyData.js?v=0.25"></script>
+  <script src="./js/assetMap.js?v=0.25"></script>
+  <script src="./js/stageMap.js?v=0.25"></script>
+  <script src="./js/visualMap.js?v=0.25"></script>
+  <script src="./js/directorMap.js?v=0.25"></script>
+  <script src="./js/assetAliases.js?v=0.25"></script>
+  <script src="./js/assetAvailability.js?v=0.25"></script>
+  <script src="./js/portraitMasks.js?v=0.25"></script>
+  <script src="./js/app.js?v=0.25"></script>
+</body>
+</html>
